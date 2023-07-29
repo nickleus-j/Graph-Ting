@@ -6,9 +6,19 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
-        <TreeView Grid.Column="0" BorderThickness="1" x:Name="BinaryTreeView" FontSize="20" FontFamily="Gadugi"  />
-        <local:AvlCompo Grid.Column="1" BorderThickness="1" BorderBrush="#FF1C7144" />
+        <ScrollViewer Grid.Column="0" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+            <TreeView BorderThickness="1" x:Name="BinaryTreeView" FontSize="18" FontFamily="Gadugi"  />
+        </ScrollViewer>
+        <ScrollViewer Grid.Column="1" x:Name="MainScrollViewer"
+                      CanContentScroll="False"
+                      VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+            <local:AvlCompo local:ZoomBehavior.IsEnabled="True"
+          local:ZoomBehavior.ZoomFactor="0.1"
+          local:ZoomBehavior.ScrollViewer="{Binding ElementName=MainScrollViewer}"
+                BorderThickness="1" BorderBrush="#FF1C7144" />
+        </ScrollViewer>
+        
     </Grid>
 </Window>

@@ -35,7 +35,7 @@ namespace Graph_Ting
             }
 
             // Display the AVL tree on the Canvas
-            DrawAVLTree(avlTree.Root, AvlCanvas, 150, 50, 80);
+            DrawAVLTree(avlTree.Root, AvlCanvas, 150, 50, 70);
         }
         private void DrawAVLTree(AVLNode root, Canvas canvas, double x, double y, double offsetX)
         {
