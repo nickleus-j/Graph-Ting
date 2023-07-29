@@ -7,6 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="350" d:DesignWidth="400" FontFamily="MS UI Gothic" FontSize="24" Foreground="#FF3D253F">
     <DockPanel>
+        <Label Content="Scroll with mouse wheel or pinch on track pad" FontSize="10" FontFamily="Century" DockPanel.Dock="Top"></Label>
         <Canvas x:Name="AvlCanvas" Background="White" DockPanel.Dock="Left" />
     </DockPanel>
 </UserControl>

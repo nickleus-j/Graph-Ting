@@ -27,15 +27,17 @@ namespace Graph_Ting
             // Sample collection of integers
             int[] values = { 78,54,23,90,34,170,21,89,123,12,6,45,190 };
 
-            // Create the AVL tree and add nodes
+            Redraw(values);
+        }
+        public void Redraw(ICollection<int> values)
+        {
+            AvlCanvas.Children.Clear();
             AVLTree avlTree = new AVLTree();
             foreach (int value in values)
             {
                 avlTree.Insert(value);
             }
-
-            // Display the AVL tree on the Canvas
-            DrawAVLTree(avlTree.Root, AvlCanvas, 150, 50, 70);
+            DrawAVLTree(avlTree.Root, AvlCanvas, 150, 40, 75);
         }
         private void DrawAVLTree(AVLNode root, Canvas canvas, double x, double y, double offsetX)
         {
