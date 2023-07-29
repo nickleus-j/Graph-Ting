@@ -4,17 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Graph_Ting.Model
+namespace GraphTing.Models.Avl
 {
-    public class TreeNode
+    public class AVLNode
     {
         public int Value { get; set; }
-        public TreeNode Left { get; set; }
-        public TreeNode Right { get; set; }
+        public int Height { get; set; }
+        public AVLNode? Left { get; set; }
+        public AVLNode? Right { get; set; }
 
-        public TreeNode(int value)
+        public AVLNode(int value)
         {
             Value = value;
+            Height = 1;
             Left = null;
             Right = null;
         }
