@@ -24,7 +24,7 @@ namespace Graph_Ting
         {
             InitializeComponent();
             // Sample collection of integers
-            int[] values = { 78,54,23,90,34,170,21,89,123,12,6,45 };
+            int[] values = { 78,54,23,90,34,170,21,89,123,12,6,45,190 };
 
             // Create the AVL tree and add nodes
             AVLTree avlTree = new AVLTree();
@@ -34,7 +34,7 @@ namespace Graph_Ting
             }
 
             // Display the AVL tree on the Canvas
-            DrawAVLTree(avlTree.Root, AvlCanvas, 400, 50, 40);
+            DrawAVLTree(avlTree.Root, AvlCanvas, 150, 50, 80);
         }
         private void DrawAVLTree(AVLNode root, Canvas canvas, double x, double y, double offsetX)
         {
@@ -47,31 +47,32 @@ namespace Graph_Ting
 
             if (root.Left != null)
             {
-                DrawEdge(canvas, x, y, x - offsetX, y + 80);
-                DrawAVLTree(root.Left, canvas, x - offsetX, y + 80, offsetX / 2);
+                DrawEdge(canvas, x, y, x - offsetX, y + 90);
+                DrawAVLTree(root.Left, canvas, x - offsetX, y + 90, offsetX / 2);
             }
 
             if (root.Right != null)
             {
-                DrawEdge(canvas, x, y, x + offsetX, y + 80);
-                DrawAVLTree(root.Right, canvas, x + offsetX, y + 80, offsetX / 2);
+                DrawEdge(canvas, x, y, x + offsetX, y + 90);
+                DrawAVLTree(root.Right, canvas, x + offsetX, y + 90, offsetX / 2);
             }
         }
 
         private void DrawNode(string value, Canvas canvas, double x, double y)
         {
+            double diameter = 40, radius = diameter / 2;
             Ellipse ellipse = new Ellipse
             {
-                Width = 30,
-                Height = 30,
+                Width = diameter,
+                Height = diameter,
                 Fill = Brushes.LightCyan,
                 Stroke = Brushes.DarkCyan,
                 StrokeThickness = 1
             };
 
             canvas.Children.Add(ellipse);
-            Canvas.SetLeft(ellipse, x - 15);
-            Canvas.SetTop(ellipse, y - 15);
+            Canvas.SetLeft(ellipse, x - radius);
+            Canvas.SetTop(ellipse, y - radius);
 
             TextBlock textBlock = new TextBlock
             {
@@ -79,10 +80,10 @@ namespace Graph_Ting
                 HorizontalAlignment = HorizontalAlignment.Center,
                 VerticalAlignment = VerticalAlignment.Center
             };
-
+            
             canvas.Children.Add(textBlock);
-            Canvas.SetLeft(textBlock, x - 15);
-            Canvas.SetTop(textBlock, y - 15);
+            Canvas.SetLeft(textBlock, x - radius);
+            Canvas.SetTop(textBlock, y - radius);
         }
 
         private void DrawEdge(Canvas canvas, double startX, double startY, double endX, double endY)

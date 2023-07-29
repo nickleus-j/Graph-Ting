@@ -8,7 +8,7 @@
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-        <TreeView Grid.Column="0" x:Name="BinaryTreeView" Margin="10" />
-        <local:AvlCompo Grid.Column="1"/>
+        <TreeView Grid.Column="0" BorderThickness="1" x:Name="BinaryTreeView" FontSize="20" FontFamily="Gadugi"  />
+        <local:AvlCompo Grid.Column="1" BorderThickness="1" BorderBrush="#FF1C7144" />
     </Grid>
 </Window>
