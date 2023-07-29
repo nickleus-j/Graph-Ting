@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Graph_Ting.Model
+namespace GraphTing.Models.BinaryTrees
 {
     public class TreeNode
     {
