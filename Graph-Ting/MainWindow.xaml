@@ -2,17 +2,20 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:Graph_Ting"
-        Title="Binary Tree Display" Height="450" Width="800">
+        Title="Show Me Display" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel>
-            <local:ElementsCompo x:Name="Elements"></local:ElementsCompo>
-            <Button x:Name="ReDrawBtn" Click="ReDrawBtn_Click" Content="Redraw"/>
-        </StackPanel>
+        <ScrollViewer Grid.Column="0" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" >
+            <StackPanel>
+                <local:ElementsCompo x:Name="Elements"></local:ElementsCompo>
+                <Button x:Name="ReDrawBtn" Click="ReDrawBtn_Click" Content="Redraw"/>
+            </StackPanel>
+        </ScrollViewer>
+
         <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" 
                       FontSize="18" FontFamily="Gadugi">
            

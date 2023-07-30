@@ -44,7 +44,11 @@ namespace Graph_Ting
         {
             TreeNode root = binaryTree.Root;
             treeView.Items.Clear();
-            treeView.Items.Add(CreateTreeViewItem(root));
+            if (root != null)
+            {
+                treeView.Items.Add(CreateTreeViewItem(root));
+            }
+            
         }
 
         private TreeViewItem CreateTreeViewItem(TreeNode node)

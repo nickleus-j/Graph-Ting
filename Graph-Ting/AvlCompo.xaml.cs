@@ -25,7 +25,7 @@ namespace Graph_Ting
         {
             InitializeComponent();
             // Sample collection of integers
-            int[] values = { 78,54,23,90,34,170,21,89,123,12,6,45,190 };
+            int[] values = { 78,54,23,90,21,89,123,12,190 };
 
             Redraw(values);
         }
@@ -47,17 +47,17 @@ namespace Graph_Ting
             }
 
             DrawNode(root.Value.ToString(), canvas, x, y);
-
+            double startY = y + 20, endY = y + 90;
             if (root.Left != null)
             {
-                DrawEdge(canvas, x, y, x - offsetX, y + 90);
-                DrawAVLTree(root.Left, canvas, x - offsetX, y + 90, offsetX / 2);
+                DrawEdge(canvas, x, startY, x - offsetX, endY);
+                DrawAVLTree(root.Left, canvas, x - offsetX, endY, offsetX / 2);
             }
 
             if (root.Right != null)
             {
-                DrawEdge(canvas, x, y, x + offsetX, y + 90);
-                DrawAVLTree(root.Right, canvas, x + offsetX, y + 90, offsetX / 2);
+                DrawEdge(canvas, x, startY, x + offsetX, endY);
+                DrawAVLTree(root.Right, canvas, x + offsetX, endY, offsetX / 2);
             }
         }
 
