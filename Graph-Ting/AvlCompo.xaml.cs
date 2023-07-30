@@ -19,7 +19,7 @@ namespace Graph_Ting
     /// <summary>
     /// Interaction logic for AvlCompo.xaml
     /// </summary>
-    public partial class AvlCompo : UserControl
+    public partial class AvlCompo : UserControl, INodeView
     {
         public AvlCompo()
         {

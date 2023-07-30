@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using GraphTing.Models.BinaryTrees;
@@ -7,46 +8,21 @@ namespace Graph_Ting
 {
     public partial class MainWindow : Window
     {
+        public GivenElements WindowElements { get; set; }
         public MainWindow()
         {
             InitializeComponent();
-
-            // Sample collection of integers
-            int[] values = { 90,4,56,100,21,455,221,89,6};
-
-            // Create the binary tree and add nodes
-            BinaryTree binaryTree = new BinaryTree();
-            foreach (int value in values)
-            {
-                binaryTree.Insert(value);
-            }
-
-            // Display the binary tree in the TreeView
-            DisplayBinaryTree(binaryTree, BinaryTreeView);
+            int[] values = { 78, 54, 23, 90, 34, 170, 21, 89, 123, 12, 6, 45, 190 };
+            WindowElements =new GivenElements();
+            WindowElements.Numbers = values.ToList();
+            Elements.Numbers = WindowElements.Numbers;
         }
 
-        private void DisplayBinaryTree(BinaryTree binaryTree, TreeView treeView)
+        private void ReDrawBtn_Click(object sender, RoutedEventArgs e)
         {
-            TreeNode root = binaryTree.Root;
-            treeView.Items.Add(CreateTreeViewItem(root));
-        }
-
-        private TreeViewItem CreateTreeViewItem(TreeNode node)
-        {
-            TreeViewItem item = new TreeViewItem();
-            item.Header = node.Value.ToString();
-
-            if (node.Left != null)
-            {
-                item.Items.Add(CreateTreeViewItem(node.Left));
-            }
-
-            if (node.Right != null)
-            {
-                item.Items.Add(CreateTreeViewItem(node.Right));
-            }
-
-            return item;
+            BinaryTreeView.Redraw(WindowElements.Numbers);
+            WindowElements.CurrentGraphView = avlTreeView;
+            WindowElements?.Draw();
         }
     }
 }
