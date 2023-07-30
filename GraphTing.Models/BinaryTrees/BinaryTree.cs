@@ -8,7 +8,7 @@ namespace GraphTing.Models.BinaryTrees
 {
     public class BinaryTree
     {
-        public TreeNode Root { get; set; }
+        public TreeNode? Root { get; set; }
 
         public BinaryTree()
         {
@@ -20,7 +20,7 @@ namespace GraphTing.Models.BinaryTrees
             Root = InsertRecursive(Root, value);
         }
 
-        private TreeNode InsertRecursive(TreeNode current, int value)
+        private TreeNode InsertRecursive(TreeNode? current, int value)
         {
             if (current == null)
             {

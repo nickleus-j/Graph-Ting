@@ -17,7 +17,7 @@ namespace GraphTing.Models.Avl
 
         // AVL tree insert method (omitted for brevity)
         // Helper method to get the height of a node
-        private int GetHeight(AVLNode node)
+        private int GetHeight(AVLNode? node)
         {
             if (node == null)
                 return 0;
@@ -25,25 +25,25 @@ namespace GraphTing.Models.Avl
         }
 
         // Helper method to calculate the balance factor of a node
-        private int GetBalance(AVLNode node)
+        private int GetBalance(AVLNode? node)
         {
             if (node == null)
                 return 0;
-            return GetHeight(node.Left) - GetHeight(node.Right);
+            return GetHeight(node?.Left) - GetHeight(node?.Right);
         }
 
         // Helper method to update the height of a node
         private void UpdateHeight(AVLNode node)
         {
             if (node != null)
-                node.Height = Math.Max(GetHeight(node.Left), GetHeight(node.Right)) + 1;
+                node.Height = Math.Max(GetHeight(node?.Left), GetHeight(node?.Right)) + 1;
         }
 
         // Helper method to perform right rotation
-        private AVLNode RotateRight(AVLNode y)
+        private AVLNode RotateRight(AVLNode? y)
         {
-            AVLNode x = y.Left;
-            AVLNode T2 = x.Right;
+            AVLNode x = y?.Left;
+            AVLNode T2 = x?.Right;
 
             x.Right = y;
             y.Left = T2;
@@ -55,10 +55,10 @@ namespace GraphTing.Models.Avl
         }
 
         // Helper method to perform left rotation
-        private AVLNode RotateLeft(AVLNode x)
+        private AVLNode RotateLeft(AVLNode? x)
         {
-            AVLNode y = x.Right;
-            AVLNode T2 = y.Left;
+            AVLNode y = x?.Right;
+            AVLNode T2 = y?.Left;
 
             y.Left = x;
             x.Right = T2;
@@ -75,7 +75,7 @@ namespace GraphTing.Models.Avl
             Root = Insert(Root, value);
         }
 
-        private AVLNode Insert(AVLNode node, int value)
+        private AVLNode Insert(AVLNode? node, int value)
         {
             // Perform standard BST insertion
             if (node == null)
@@ -85,7 +85,7 @@ namespace GraphTing.Models.Avl
                 node.Left = Insert(node.Left, value);
             else if (value > node.Value)
                 node.Right = Insert(node.Right, value);
-            else // Duplicate values are not allowed in the AVL tree
+            else // No Duplicate values in the AVL tree
                 return node;
 
             // Update the height of the current node
@@ -94,22 +94,22 @@ namespace GraphTing.Models.Avl
             // Get the balance factor to check if the node is unbalanced
             int balance = GetBalance(node);
 
-            // Left-Left case: Perform right rotation
+            // Left-Left case: Rotate Right
             if (balance > 1 && value < node.Left.Value)
                 return RotateRight(node);
 
-            // Right-Right case: Perform left rotation
+            // Right-Right case: Rotate left
             if (balance < -1 && value > node.Right.Value)
                 return RotateLeft(node);
 
-            // Left-Right case: Perform left rotation on left child and then right rotation on the current node
+            // Left-Right case:  left rotation on left child and then right rotation on the current node
             if (balance > 1 && value > node.Left.Value)
             {
                 node.Left = RotateLeft(node.Left);
                 return RotateRight(node);
             }
 
-            // Right-Left case: Perform right rotation on right child and then left rotation on the current node
+            // Right-Left case:  right rotation on right child and then left rotation on the current node
             if (balance < -1 && value < node.Right.Value)
             {
                 node.Right = RotateRight(node.Right);

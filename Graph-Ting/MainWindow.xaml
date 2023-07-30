@@ -6,7 +6,6 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
         <ScrollViewer Grid.Column="0" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" >
@@ -15,20 +14,27 @@
                 <Button x:Name="ReDrawBtn" Click="ReDrawBtn_Click" Content="Redraw"/>
             </StackPanel>
         </ScrollViewer>
-
-        <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" 
+        <TabControl  Grid.Column="1">
+            <TabItem Header="Binary Tree">
+                <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" 
                       FontSize="18" FontFamily="Gadugi">
-           
-            <local:BinaryTreeCompo BorderThickness="1" x:Name="BinaryTreeView"/>
-        </ScrollViewer>
-        <ScrollViewer Grid.Column="2" x:Name="MainScrollViewer"
+
+                    <local:BinaryTreeCompo BorderThickness="1" x:Name="BinaryTreeView"/>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="AVL Tree">
+                <ScrollViewer  x:Name="MainScrollViewer"
                       CanContentScroll="False"
                       VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
-            <local:AvlCompo local:ZoomBehavior.IsEnabled="True" x:Name="avlTreeView"
+                    <local:AvlCompo local:ZoomBehavior.IsEnabled="True" x:Name="avlTreeView"
           local:ZoomBehavior.ZoomFactor="0.1"
           local:ZoomBehavior.ScrollViewer="{Binding ElementName=MainScrollViewer}"
                 BorderThickness="1" BorderBrush="#FF1C7144" />
-        </ScrollViewer>
+                </ScrollViewer>
+            </TabItem>
+        </TabControl>
+        
+       
         
     </Grid>
 </Window>
