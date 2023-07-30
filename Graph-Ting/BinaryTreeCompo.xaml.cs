@@ -19,16 +19,16 @@ namespace Graph_Ting
     /// <summary>
     /// Interaction logic for BinaryTreeCompo.xaml
     /// </summary>
-    public partial class BinaryTreeCompo : UserControl
+    public partial class BinaryTreeCompo : UserControl, INodeView
     {
         public BinaryTreeCompo()
         {
             InitializeComponent();
             // Sample collection of integers
             int[] values = { 90, 4, 56, 100, 21,41, 455, 221, 89, 6,200,122,211 };
-            redoTree(values);
+            Redraw(values);
         }
-        public void redoTree(ICollection<int> values)
+        public void Redraw(ICollection<int> values)
         {
             // Create the binary tree and add nodes
             BinaryTree binaryTree = new BinaryTree();
@@ -43,6 +43,7 @@ namespace Graph_Ting
         private void DisplayBinaryTree(BinaryTree binaryTree, TreeView treeView)
         {
             TreeNode root = binaryTree.Root;
+            treeView.Items.Clear();
             treeView.Items.Add(CreateTreeViewItem(root));
         }
 
