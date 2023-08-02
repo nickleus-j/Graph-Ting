@@ -31,7 +31,7 @@ namespace Graph_Ting
         {
             foreach(var number in numbers) 
             {
-                if ( number >= 0)
+                if ( number >= 0 && number < 1000)
                 {
                     NumbersBox.Items.Add(number.ToString());
                 }
@@ -40,7 +40,7 @@ namespace Graph_Ting
         private void AddNumberButton_Click(object sender, RoutedEventArgs e)
         {
             int number;
-            if (int.TryParse(IntBox.Text, out number) && number >= 0)
+            if (int.TryParse(IntBox.Text, out number) && number >= 0 && number <1000)
             {
                 Numbers.Add(number);
                 NumbersBox.Items.Add(number.ToString());
