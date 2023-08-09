@@ -23,6 +23,7 @@ namespace Graph_Ting
             BinaryTreeView.Redraw(WindowElements.Numbers);
             WindowElements.CurrentGraphView = avlTreeView;
             WindowElements?.Draw();
+            listTreeView?.Redraw(WindowElements?.Numbers);
         }
     }
 }

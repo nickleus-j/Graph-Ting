@@ -32,6 +32,16 @@
                 BorderThickness="1" BorderBrush="#FF1C7144" />
                 </ScrollViewer>
             </TabItem>
+            <TabItem Header="List Tree">
+                    <ScrollViewer  x:Name="ListScrollViewer"
+                      CanContentScroll="False"
+                      VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                        <local:ListCompo local:ZoomBehavior.IsEnabled="True" x:Name="listTreeView"
+          local:ZoomBehavior.ZoomFactor="0.1"
+          local:ZoomBehavior.ScrollViewer="{Binding ElementName=ListScrollViewer}"
+                BorderThickness="1" BorderBrush="#FF1C7144" />
+                    </ScrollViewer>
+                </TabItem>
         </TabControl>
         
        
