@@ -35,14 +35,17 @@ namespace Graph_Ting
         {
             listCanvas.Children.Clear();
             ListNode node = new ListNode(),start=node;
-            foreach (int value in values)
+            for(int i=0;i<values.Count;i++)
             {
-                ListNode nextNode = new ListNode();
-                node.Value = value;
-                node.NextNode = nextNode;
-                node=nextNode;
+                int currentValue = values.ElementAt(i);
+                node.Value = currentValue;
+                if (i<values.Count-1)
+                {
+                    ListNode nextNode = new ListNode();
+                    node.NextNode = nextNode;
+                    node = nextNode;
+                }
             }
-            node.NextNode = null;
             DrawList(start, listCanvas, 100, 20, 0);
         }
         private void DrawList(ListNode root, Canvas canvas, double x, double y, double offsetX)
@@ -53,7 +56,7 @@ namespace Graph_Ting
             }
 
             DrawNode(root.Value.ToString(), canvas, x, y);
-            double startY = y + 20, endY = y + 50;
+            double startY = y + 16, endY = y + 40;
             
             if (root.NextNode != null)
             {
@@ -64,7 +67,7 @@ namespace Graph_Ting
         }
         private void DrawNode(string value, Canvas canvas, double x, double y)
         {
-            double diameter = 40, radius = diameter / 2;
+            double diameter = 32, radius = diameter / 2;
             Ellipse ellipse = new Ellipse
             {
                 Width = diameter,

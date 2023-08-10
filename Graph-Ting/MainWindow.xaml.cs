@@ -16,6 +16,7 @@ namespace Graph_Ting
             WindowElements =new GivenElements();
             WindowElements.Numbers = values.ToList();
             Elements.Numbers = WindowElements.Numbers;
+            listTreeView?.Redraw(WindowElements?.Numbers);
         }
 
         private void ReDrawBtn_Click(object sender, RoutedEventArgs e)
