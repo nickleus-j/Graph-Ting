@@ -72,7 +72,7 @@ namespace Graph_Ting
             {
                 Width = diameter,
                 Height = diameter,
-                Fill = Brushes.LightSeaGreen,
+                Fill = Brushes.Violet,
                 Stroke = Brushes.Teal,
                 StrokeThickness = 1
             };

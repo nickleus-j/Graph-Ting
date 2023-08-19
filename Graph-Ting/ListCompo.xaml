@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Graph_Ting"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800" FontFamily="MS UI Gothic" FontSize="24">
+             d:DesignHeight="250" d:DesignWidth="500" FontFamily="Cascadia Mono SemiBold" FontSize="20">
     <DockPanel>
         <Label Content="Scroll with mouse wheel or pinch on track pad" FontSize="10" FontFamily="Century" DockPanel.Dock="Top"></Label>
         <Canvas x:Name="listCanvas" Background="White" DockPanel.Dock="Left" />
