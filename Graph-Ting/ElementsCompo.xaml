@@ -9,9 +9,9 @@
     <StackPanel>
         <Label Content="Enter Non negative Integer here"></Label>
         <Label Content="Number must from 0 to 999"></Label>
-        <TextBox x:Name="IntBox"></TextBox>
-        <Button x:Name="Add" Content="Add Number" Click="AddNumberButton_Click" Margin="0,10,0,5"></Button>
+        <TextBox x:Name="IntBox" FontSize="14"></TextBox>
+        <Button x:Name="Add" Content="Add Number" Click="AddNumberButton_Click" Margin="0,10,0,5" FontSize="18"></Button>
         <ListBox x:Name="NumbersBox" MinHeight="50" Margin="0,0,0,10"></ListBox>
-        <Button x:Name="Remove" Content="Remove Number" Click="RemoveNumberButton_Click" Margin="0,10,0,5"></Button>
+        <Button x:Name="Remove" Content="Remove Number" Click="RemoveNumberButton_Click" Margin="0,10,0,5" FontSize="16"></Button>
     </StackPanel>
 </UserControl>

@@ -11,7 +11,7 @@
         <ScrollViewer Grid.Column="0" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" >
             <StackPanel>
                 <local:ElementsCompo x:Name="Elements"></local:ElementsCompo>
-                <Button x:Name="ReDrawBtn" Click="ReDrawBtn_Click" Content="Redraw"/>
+                <Button x:Name="ReDrawBtn" Click="ReDrawBtn_Click" Content="Redraw" FontSize="16"/>
             </StackPanel>
         </ScrollViewer>
         <TabControl  Grid.Column="1">
