@@ -42,6 +42,16 @@
                 BorderThickness="1" BorderBrush="#FF1C7144" />
                     </ScrollViewer>
                 </TabItem>
+            <TabItem Header="Divisibility">
+                <ScrollViewer  x:Name="DivScrollViewer"
+                      CanContentScroll="False"
+                      VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                    <local:Divisibility local:ZoomBehavior.IsEnabled="True" x:Name="DivGraphView"
+          local:ZoomBehavior.ZoomFactor="0.1"
+          local:ZoomBehavior.ScrollViewer="{Binding ElementName=DivScrollViewer}"
+                BorderThickness="1" BorderBrush="#FF1C7144" />
+                </ScrollViewer>
+            </TabItem>
         </TabControl>
         
        

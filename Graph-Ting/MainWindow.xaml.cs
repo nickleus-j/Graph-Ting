@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -17,6 +18,7 @@ namespace Graph_Ting
             WindowElements.Numbers = values.ToList();
             Elements.Numbers = WindowElements.Numbers;
             listTreeView?.Redraw(WindowElements?.Numbers);
+            DivGraphView.Redraw(WindowElements?.Numbers.ToImmutableSortedSet());
         }
 
         private void ReDrawBtn_Click(object sender, RoutedEventArgs e)
@@ -25,6 +27,7 @@ namespace Graph_Ting
             WindowElements.CurrentGraphView = avlTreeView;
             WindowElements?.Draw();
             listTreeView?.Redraw(WindowElements?.Numbers);
+            DivGraphView.Redraw(WindowElements?.Numbers.ToImmutableSortedSet());
         }
     }
 }

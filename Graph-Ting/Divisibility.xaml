@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="Graph_Ting.Divisibility"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Graph_Ting"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <DockPanel>
+        <Label Content="Scroll with mouse wheel or pinch on track pad" FontSize="10" FontFamily="Century" DockPanel.Dock="Top"></Label>
+        <Canvas x:Name="DivCanvas" Background="White" DockPanel.Dock="Left" />
+    </DockPanel>
+</UserControl>
