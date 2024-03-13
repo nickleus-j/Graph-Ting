@@ -52,6 +52,17 @@
                 BorderThickness="1" BorderBrush="#FF1C7144" />
                 </ScrollViewer>
             </TabItem>
+            <TabItem Header="Line">
+                <ScrollViewer  x:Name="LineScrollViewer"
+            CanContentScroll="False"
+            VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                    <local:CurveGraph 
+                        local:ZoomBehavior.IsEnabled="True" x:Name="LineView"
+local:ZoomBehavior.ZoomFactor="0.1"
+local:ZoomBehavior.ScrollViewer="{Binding ElementName=ListScrollViewer}"
+      BorderThickness="1" BorderBrush="#FF1C7144" />
+                </ScrollViewer>
+            </TabItem>
         </TabControl>
         
        

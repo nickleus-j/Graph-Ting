@@ -19,6 +19,7 @@ namespace Graph_Ting
             Elements.Numbers = WindowElements.Numbers;
             listTreeView?.Redraw(WindowElements?.Numbers);
             DivGraphView.Redraw(WindowElements?.Numbers.ToImmutableSortedSet());
+            LineView?.Redraw(WindowElements?.Numbers);
         }
 
         private void ReDrawBtn_Click(object sender, RoutedEventArgs e)
@@ -28,6 +29,7 @@ namespace Graph_Ting
             WindowElements?.Draw();
             listTreeView?.Redraw(WindowElements?.Numbers);
             DivGraphView.Redraw(WindowElements?.Numbers.ToImmutableSortedSet());
+            LineView?.Redraw(WindowElements?.Numbers);
         }
     }
 }
