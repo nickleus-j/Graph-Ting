@@ -50,7 +50,7 @@ namespace Graph_Ting
 
             var path = new Path
             {
-                Stroke = Brushes.Chocolate,
+                Stroke = Brushes.BlueViolet,
                 StrokeThickness = 2,
                 Data = pathGeometry
             };

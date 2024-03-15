@@ -18,7 +18,6 @@ namespace Graph_Ting
             WindowElements.Numbers = values.ToList();
             Elements.Numbers = WindowElements.Numbers;
             listTreeView?.Redraw(WindowElements?.Numbers);
-            DivGraphView.Redraw(WindowElements?.Numbers.ToImmutableSortedSet());
             LineView?.Redraw(WindowElements?.Numbers);
         }
 
@@ -28,7 +27,6 @@ namespace Graph_Ting
             WindowElements.CurrentGraphView = avlTreeView;
             WindowElements?.Draw();
             listTreeView?.Redraw(WindowElements?.Numbers);
-            DivGraphView.Redraw(WindowElements?.Numbers.ToImmutableSortedSet());
             LineView?.Redraw(WindowElements?.Numbers);
         }
     }

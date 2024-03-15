@@ -33,22 +33,12 @@
                 </ScrollViewer>
             </TabItem>
             <TabItem Header="List Tree">
-                    <ScrollViewer  x:Name="ListScrollViewer"
+                <ScrollViewer  x:Name="ListScrollViewer"
                       CanContentScroll="False"
                       VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
-                        <local:ListCompo local:ZoomBehavior.IsEnabled="True" x:Name="listTreeView"
+                    <local:ListCompo local:ZoomBehavior.IsEnabled="True" x:Name="listTreeView"
           local:ZoomBehavior.ZoomFactor="0.1"
           local:ZoomBehavior.ScrollViewer="{Binding ElementName=ListScrollViewer}"
-                BorderThickness="1" BorderBrush="#FF1C7144" />
-                    </ScrollViewer>
-                </TabItem>
-            <TabItem Header="Divisibility">
-                <ScrollViewer  x:Name="DivScrollViewer"
-                      CanContentScroll="False"
-                      VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
-                    <local:Divisibility local:ZoomBehavior.IsEnabled="True" x:Name="DivGraphView"
-          local:ZoomBehavior.ZoomFactor="0.1"
-          local:ZoomBehavior.ScrollViewer="{Binding ElementName=DivScrollViewer}"
                 BorderThickness="1" BorderBrush="#FF1C7144" />
                 </ScrollViewer>
             </TabItem>
@@ -58,14 +48,14 @@
             VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
                     <local:CurveGraph 
                         local:ZoomBehavior.IsEnabled="True" x:Name="LineView"
-local:ZoomBehavior.ZoomFactor="0.1"
-local:ZoomBehavior.ScrollViewer="{Binding ElementName=ListScrollViewer}"
-      BorderThickness="1" BorderBrush="#FF1C7144" />
+                        local:ZoomBehavior.ZoomFactor="0.1"
+                        local:ZoomBehavior.ScrollViewer="{Binding ElementName=ListScrollViewer}"
+                        BorderThickness="1" BorderBrush="#FF1C7144" />
                 </ScrollViewer>
             </TabItem>
         </TabControl>
-        
-       
-        
+
+
+
     </Grid>
 </Window>
