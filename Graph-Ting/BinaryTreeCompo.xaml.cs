@@ -25,7 +25,7 @@ namespace Graph_Ting
         {
             InitializeComponent();
             // Sample collection of integers
-            int[] values = { 90, 4, 56, 100, 21,41, 455, 221, 89, 6,200,122,211 };
+            int[] values = { 90, 4, 56, 100, 21,41, 45, 221, 89, 6,200,122,211 };
             Redraw(values);
         }
         public void Redraw(ICollection<int> values)

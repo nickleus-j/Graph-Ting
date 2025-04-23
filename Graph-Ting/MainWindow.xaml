@@ -17,7 +17,7 @@
         <TabControl  Grid.Column="1">
             <TabItem Header="Binary Tree">
                 <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" 
-                      FontSize="18" FontFamily="Gadugi">
+                      FontSize="21" FontFamily="Gadugi">
 
                     <local:BinaryTreeCompo BorderThickness="1" x:Name="BinaryTreeView"/>
                 </ScrollViewer>
