@@ -61,13 +61,22 @@ namespace Graph_Ting
                 {
                     Width = barWidth - spacing,
                     Height = barHeight,
-                    Fill = Brushes.SteelBlue
+                    Fill = Brushes.DarkKhaki
                 };
 
                 Canvas.SetLeft(rect, i * barWidth);
                 Canvas.SetTop(rect, canvasHeight - barHeight);
 
                 GraphCanvas.Children.Add(rect);
+                TextBlock textBlock = new TextBlock
+                {
+                    Text = values.ElementAt(i).ToString(),
+                    HorizontalAlignment = HorizontalAlignment.Center,
+                    VerticalAlignment = VerticalAlignment.Center
+                };
+                Canvas.SetLeft(textBlock, i * barWidth);
+                Canvas.SetTop(textBlock, canvasHeight-5);
+                GraphCanvas.Children.Add(textBlock);
             }
         }
     }
