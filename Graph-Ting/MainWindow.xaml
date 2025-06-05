@@ -53,6 +53,16 @@
                         BorderThickness="1" BorderBrush="#FF1C7144" />
                 </ScrollViewer>
             </TabItem>
+            <TabItem Header="Bar Graph">
+                <ScrollViewer  x:Name="MainBarScrollViewer"
+            CanContentScroll="False"
+            VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                    <local:BarGraph local:ZoomBehavior.IsEnabled="True" x:Name="barView"
+local:ZoomBehavior.ZoomFactor="0.1"
+local:ZoomBehavior.ScrollViewer="{Binding ElementName=MainBarScrollViewer}"
+      BorderThickness="1" BorderBrush="#FF1C7144" />
+                </ScrollViewer>
+            </TabItem>
         </TabControl>
 
 
