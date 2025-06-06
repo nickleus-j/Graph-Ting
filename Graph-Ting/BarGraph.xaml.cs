@@ -71,6 +71,7 @@ namespace Graph_Ting
                 TextBlock textBlock = new TextBlock
                 {
                     Text = values.ElementAt(i).ToString(),
+                    FontFamily = new FontFamily("Consolas"),
                     HorizontalAlignment = HorizontalAlignment.Center,
                     VerticalAlignment = VerticalAlignment.Center
                 };

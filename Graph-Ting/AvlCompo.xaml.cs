@@ -25,7 +25,7 @@ namespace Graph_Ting
         {
             InitializeComponent();
             // Sample collection of integers
-            int[] values = { 78,54,23,90,21,89,123,12,190 };
+            int[] values = { 78, 54, 23, 90, 34, 170, 21, 89, 123, 12, 6, 45, 190 };
 
             Redraw(values);
         }
@@ -68,7 +68,7 @@ namespace Graph_Ting
             {
                 Width = diameter,
                 Height = diameter,
-                Fill = Brushes.LightCyan,
+                Fill = Brushes.Cyan,
                 Stroke = Brushes.DarkCyan,
                 StrokeThickness = 1
             };
