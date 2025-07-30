@@ -68,8 +68,8 @@ namespace Graph_Ting
             {
                 Width = diameter,
                 Height = diameter,
-                Fill = Brushes.Cyan,
-                Stroke = Brushes.DarkCyan,
+                Fill = Brushes.Teal,
+                Stroke = Brushes.DarkOliveGreen,
                 StrokeThickness = 1
             };
 
@@ -97,7 +97,7 @@ namespace Graph_Ting
                 Y1 = startY,
                 X2 = endX,
                 Y2 = endY,
-                Stroke = Brushes.Black,
+                Stroke = Brushes.Gray,
                 StrokeThickness = 1
             };
 
